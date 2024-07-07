@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Landing Page</title>
+</head>
+<body>
+    <header>  
+      <div class="navbar">
+        <a href="#" class="company-name">LOGO</a>
+        <a href="#">Contact us</a>
+        <a href="#">Property</a>
+        <a href="#">About</a>
+        <a href="#">Blogs</a>
+        <a href="#">Home</a>
+      </div>
+    </header>
+
+    <div class="carousel">
+        <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="slide-1.jpg" alt="Image 1">
+              </div>
+              <div class="carousel-item">
+                <img src="slide-2.jpg" alt="Image 2">
+              </div>
+              <div class="carousel-item">
+                <img src="slide-3.jpg" alt="Image 3">
+              </div>
+              <div class="carousel-item">
+                <img src="slide-4.jpg" alt="Image 4">
+        </div>
+    </div>
+
+        <!-- New Section with Property Card -->
+        <section class="property-listing">
+          <div class="container">
+              <div class="property-card">
+                  <div class="property-content">
+                      <span class="property-type sale">For Sale</span>
+                      <span class="property-type new">NEW LAUNCH - RESIDENTIAL & SHOPPING BRANDS</span>
+                      <h3>Avalon Residency Goregaon West, Mumbai - Starting from ₹1.86 Cr++</h3>
+                      <span class="property-location"><i class="lni-map-marker"></i> Goregaon MTNL, S.V. Road, Goregaon
+                          (West), Mumbai – 400 104., Mumbai, Maharashtra</span>
+                      <h3 class="property-price">₹18.6 million</h3>
+                      <div class="property-features">
+                          <div class="feature">
+                              <img src="https://classiclinkrealtors.com/themes/resido/img/bed.svg" width="13"
+                                  alt="bed icon"> 2 Beds
+                          </div>
+                          <div class="feature">
+                              <img src="https://classiclinkrealtors.com/themes/resido/img/bathtub.svg" width="13"
+                                  alt="bathtub icon"> 2 Baths
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  
+      <!-- New Detail & Features Section -->
+      <section class="property-details-features">
+          <div class="container">
+              <div class="property-block-wrap-header">
+                  <h4 class="property-block-title">Detail &amp; Features</h4>
+                  <a class="toggle-button" id="toggle-btn-2" href="javascript:void(0);"
+                      onclick="toggleDetails('propertyDetails')">
+                      &DownArrowBar;
+                  </a>
+              </div>
+              <div class="block-body" id="propertyDetails" style="display: none;">
+                  <ul class="detail-features">
+                      <li><strong>Bedrooms:</strong> 2 Beds</li>
+                      <li><strong>Bathrooms:</strong> 2 Baths</li>
+                      <li><strong>Floors:</strong> 2</li>
+                      <li><strong>Property Type:</strong> New Launch</li>
+                  </ul>
+              </div>
+          </div>
+      </section>
+      <!-- Description Section -->
+      <section class="property-details-features">
+          <div class="container">
+              <div class="property-block-wrap-header">
+                  <h4 class="property-block-title">Description</h4>
+                  <a class="toggle-button" href="javascript:void(0);" onclick="toggleDetails('description-details')">
+                    &DownArrowBar;
+                  </a>
+              </div>
+              <div class="block-body" id="description-details" style="display: none;">
+  
+                  <h1 class="description">Avalon Residency Goregaon (West) Mumbai -</h1>
+  
+                  <h3 class="description">Description :</h3>
+                  <p class="description ">
+                      Embark on a journey where every detail is meticulously crafted to perfection. Our direct advisory
+                      platform is your guide, ensuring a seamless experience from exploration to ownership. With projects
+                      registered under RERA, we assure transparency and accountability at every turn.
+  
+                      At Avalon Residency, we don't just build homes; we create sanctuaries where luxury transcends mere
+                      structures. Partnering with The Balwa Group and A2O Realty, "An Arif Fazlani Venture," we redefine
+                      urban living, blending opulence with eco-consciousness.
+  
+                      Imagine waking up to breathtaking views from two towering skyscrapers, designed with elegance and
+                      sophistication. Step onto your spacious balcony, an oasis in the sky, inviting you to soak in the
+                      beauty of the surrounding landscape.
+  
+                      Choose from an array of spacious options, including 2+2 and 3+3 BHKs, each meticulously designed to
+                      cater to your every need. For those seeking unparalleled grandeur, explore our beautiful duplexes
+                      and penthouses, where luxury knows no bounds.
+  
+                      Experience the epitome of premium living at Avalon Residency. Schedule your visit now and let us
+                      guide you towards your dream home.
+                  </p>
+                  <h2 class="description">Area in SqFt</h2>
+  
+                  <h3 class="description">2BHK Flat Sizes:</h3>
+                  <h3 class="description">- 772 sq.ft.</h3>
+                  <h3 class="description">- 739 sq.ft.</h3>
+                  <h3 class="description">- 752 sq.ft.</h3>
+                  <h3 class="description">- 632 sq.ft.</h3>
+                  <h3 class="description">- 755 sq.ft.</h3>
+  
+                  <h3 class="description">Starting Price :</h3>
+                  <h3 class="description">- ₹1.86++ crore </h3>
+  
+                  <h3 class="description">Also 23 & 4 BHK OPTIONS</h3>
+                  <div class="property-image">
+                      <img src="property2.jpg" alt="Avalon Residency">
+                      <img src="property-image.jpg" alt="Avalon Residency">
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!-- Facilties Section -->
+      <section class="property-details-features">
+          <div class="container">
+              <div class="property-block-wrap-header">
+                  <h4 class="property-block-title">Facilites</h4>
+                  <a class="toggle-button" href="javascript:void(0);" onclick="toggleDetails('facilities-details')">
+                    &DownArrowBar;
+                  </a>
+              </div>
+              <div class="block-body" id="facilities-details" style="display: none;">
+                  <h5 class="description"> - Lounge Area</h5>
+                  <h5 class="description">- Party Hall</h5>
+                  <h5 class="description"> - Games Room</h5>
+                  <h5 class="description"> - Kid's Play Area</h5>
+                  <h5 class="description">- Cricket Turf</h5>
+                  <h5 class="description"> - Multiplay Court for Basketball and Badminton</h5>
+                  <h5 class="description"> - Gym for Men</h5>
+                  <h5 class="description"> - Gym for Women</h5>
+                  <h5 class="description"> - Gazebo Seating</h5>
+                  <h5 class="description"> - Women's Changing Room</h5>
+                  <h5 class="description"> - Swimming Pool Exclusive for Women's</h5>
+                  <h5 class="description"> - Women's Pool Deck with Loungers</h5>
+                  <h5 class="description"> - Men's Changing Room</h5>
+                  <h5 class="description"> - Swimming Pool Exclusive for Men's</h5>
+                  <h5 class="description"> - Men's Pool Deck with Loungers</h5>
+  
+              </div>
+          </div>
+      </section>
+
+      <!-- Gallery-->
+      <section class="property-details-features">
+        <div class="container">
+            <div class="property-block-wrap-header">
+                <h4 class="property-block-title">Gallery</h4>
+                <a class="toggle-button" href="javascript:void(0);" onclick="toggleDetails('Gallery-details')">
+                  &DownArrowBar;
+                </a>
+            </div>
+
+            <div class="block-body" id="Gallery-details" style="display: none;">
+                <h4>Images that convince you :</h4>
+                <div class="images">
+                    <!-- Images will go here -->
+                <img src="image1.jpg" alt="Inside View 1">
+                <img src="image2.jpg" alt="Inside View 2">
+                <img src="image3.jpg" alt="Outside View 1">
+                <!-- Add more images as needed -->
+                </div>
+            </div>
+        </div>
+
+      <!-- Location -->
+      <section class="property-details-features">
+          <div class="container">
+              <div class="property-block-wrap-header">
+                  <h4 class="property-block-title">Location</h4>
+                  <a class="toggle-button" id="toggle-btn-2" href="javascript:void(0);"
+                      onclick="toggleDetails('locationDetails')">
+                      &DownArrowBar;
+                  </a>
+              </div>
+              <div class="block-body" id="locationDetails" style="display: none;">
+                  <h3 class="description">Aryabhatta college,University of Delhi, Plot No 5, Benito Juarez Marg, South Campus, Anand Niketan, New Delhi, Delhi 110021</h3>
+                  <div class="col-md">
+                    <div id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.7041872015975!2d77.1585344752273!3d28.578644275694188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d02ba9bcb0b23%3A0x17699e9de4def852!2sAryabhatta%20College%2C%20University%20Of%20Delhi!5e0!3m2!1sen!2sin!4v1695356662588!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!-- Property Details Section -->
+      <section class="property-details-features">
+          <div class="container">
+              <div class="property-info">
+                  <h2>About Avalon Residency</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel ligula id ligula faucibus
+                      fringilla. Duis vehicula diam vel nibh.</p>
+                  <ul>
+                      <li>3 BHK Apartments</li>
+                      <li>Gym & Swimming Pool</li>
+                      <li>24/7 Security</li>
+                      <li>Close to Metro Station</li>
+                  </ul>
+                  <p class="price">Price: Rs 1.86 Cr</p>
+              </div>
+          </div>
+      </section>
+      
+
+      <!-- Contact Section -->
+      <section class="contact">
+          <div class="container">
+              <h2>Contact Us</h2>
+              <form>
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required>
+  
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+  
+                  <label for="message">Message:</label>
+                  <textarea id="message" name="message" required></textarea>
+  
+                  <button type="submit">Submit</button>
+              </form>
+          </div>
+      </section>
+
+      <section>
+        <div class="lalit-rating">
+            <h3> Rating =></h3>
+          <div class="rating">
+            <input type="radio" id="star5" name="rating" value="5" />
+            <label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4" />
+            <label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3" />
+            <label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2" />
+            <label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1" />
+            <label for="star1"></label>
+          </div>
+        </div>
+      </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <ul>
+                <li>Phone: +1234567890</li>
+                <li>Email: info@example.com</li>
+                <li>Address: 123 Street, City, Country</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+      </div>
+    <p class="footer-bottom">&copy; 2024 Your Website. All rights reserved.</p>
+
+    </footer>
+    <script src="script.js"> </script>
+</body> 
+</html>
