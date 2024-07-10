@@ -1,53 +1,79 @@
-const carousel = document.querySelector('.carousel');
-const items = document.querySelectorAll('.carousel-item');
-const indicators = document.querySelectorAll('.indicator');
+const stars = document.querySelectorAll(".star");
+const rating = document.getElementById("rating");
+const reviewText = document.getElementById("review");
+const submitBtn = document.getElementById("submit");
+const reviewsContainer = document.getElementById("reviews");
 
-let current = 0;
-function autoplay() {
-  setTimeout(() => {
-    current++;
-    if (current >= items.length) current = 0;
-    updateCarousel();
-    autoplay();
-  }, 3000);
-}
+stars.forEach((star) => {
+	star.addEventListener("click", () => {
+		const value = parseInt(star.getAttribute("data-value"));
+		rating.innerText = value;
 
-function updateCarousel() {
-   items.forEach((item, index) => {
-     item.classList.remove('active');
-     if (index === current) item.classList.add('active');
-   });
-   indicators.forEach((indicator, index) => {
-     indicator.classList.remove('active');
-     if (index === current) indicator.classList.add('active');
-   });
-}
+		// Remove all existing classes from stars
+		stars.forEach((s) => s.classList.remove("one", 
+												"two", 
+												"three", 
+												"four", 
+												"five"));
 
-autoplay();
+		// Add the appropriate class to 
+		// each star based on the selected star's value
+		stars.forEach((s, index) => {
+			if (index < value) {
+				s.classList.add(getStarColorClass(value));
+			}
+		});
 
-document.querySelector('form').addEventListener('submit', function (event) {
-  event.preventDefault();
-  alert('Form submitted!');
+		// Remove "selected" class from all stars
+		stars.forEach((s) => s.classList.remove("selected"));
+		// Add "selected" class to the clicked star
+		star.classList.add("selected");
+	});
 });
 
-         // Function to toggle visibility of details sections
-         function toggleDetails(id) {
-          const details = document.getElementById(id);
-          if (details.style.display === 'none') {
-              details.style.display = 'block';
-          } else {
-              details.style.display = 'none';
-          }
-      }
+submitBtn.addEventListener("click", () => {
+	const review = reviewText.value;
+	const userRating = parseInt(rating.innerText);
 
-      const stars = document.querySelectorAll('.rating input');
+	if (!userRating || !review) {
+		alert(
+"Please select a rating and provide a review before submitting."
+			);
+		return;
+	}
 
-stars.forEach(star => {
-  star.addEventListener('click', function() {
-    // Get the rating value
-    const rating = this.value;
-    console.log('Rated:', rating);
+	if (userRating > 0) {
+		const reviewElement = document.createElement("div");
+		reviewElement.classList.add("review");
+		reviewElement.innerHTML = 
+`<p><strong>Rating: ${userRating}/5</strong></p><p>${review}</p>`;
+		reviewsContainer.appendChild(reviewElement);
 
-    // You can send this rating to your backend or perform other actions
-  });
+		// Reset styles after submitting
+		reviewText.value = "";
+		rating.innerText = "0";
+		stars.forEach((s) => s.classList.remove("one", 
+												"two", 
+												"three", 
+												"four", 
+												"five", 
+												"selected"));
+	}
 });
+
+function getStarColorClass(value) {
+	switch (value) {
+		case 1:
+			return "one";
+		case 2:
+			return "two";
+		case 3:
+			return "three";
+		case 4:
+			return "four";
+		case 5:
+			return "five";
+		default:
+			return "";
+	}
+}
